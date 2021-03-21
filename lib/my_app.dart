@@ -1,17 +1,17 @@
 import 'dart:io';
 import 'dart:math';
 
-int guess;
+int guess; //create number parameter
+Random rand = Random(); //create a random number generator
 
-Random rand = Random();
+int answer = rand.nextInt(100); // get a random interger from 0 - 99
 
-int answer = rand.nextInt(100);
-
+///create function control flow statment
 dynamic randomNumber() {
   do {
     print('Enter you guess : ');
-    var temp = stdin.readLineSync();
-    guess = int.parse(temp);
+    var temp = stdin.readLineSync(); // read in from the keyboard.
+    guess = int.parse(temp); //convert string to interger
     if (guess < answer) {
       print('Too low!');
     } else if (guess > answer) {
